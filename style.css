@@ -1,0 +1,127 @@
+body{
+    margin: 0px;
+    padding: 0px;
+    background-color: black;
+
+    
+}
+
+#particles-js{
+    background-color: black;
+    height: 100%;
+    margin-top: -20px;
+    width: 100%;
+}
+
+
+#title{
+    color: white;
+    font-variant: small-caps;
+    text-align: center;
+    font-size:200px;
+    position: absolute;
+    top: 40%;
+    display: block;
+    left:30%;
+    font-family: 'Righteous', cursive;
+}
+.myweb{
+    font-family: 'Righteous', cursive;
+}
+
+.lists{
+    font-family: 'Dosis', sans-serif;
+    font-size: 18px;
+}
+
+.line{
+    display: block;
+    unicode-bidi: isolate;
+    margin-block-start:0;
+    margin-block-end: 0;
+    margin-inline-start: auto;
+    margin-inline-end: auto;
+    overflow: hidden;
+    border-style: inset;
+    border-width: 0px;
+    margin-bottom: 0;
+    margin-top: -25px;
+    padding-top: 0%;
+    background-color:orangered;
+    height:3px;
+}
+.bdoy{
+    background-color: black;
+}
+#mars{
+    margin-top: -50px;
+}
+.subtitle{
+    font-family: 'Roboto Mono', monospace;
+    color:white;
+    letter-spacing: 1px;
+}
+.sub_line{
+    width:700px;
+    text-align: center;
+    height: 2px;
+    background-color: white;
+    margin-bottom: 30px
+}
+.sndline{
+    display: block;
+    unicode-bidi: isolate;
+    margin-block-start:1.5px;
+    margin-block-end: 1.5px;
+    margin-inline-start: auto;
+    margin-inline-end: auto;
+    overflow: hidden;
+    border-style: inset;
+    border-width: 0px;
+    margin-bottom: 0;
+    margin-top: 750px;
+    padding-top: 0%;
+    background-color:orangered;
+    height:3px;
+}
+#curiosity{
+    margin-left:200px;
+}
+#iiiline{
+    display: block;
+    unicode-bidi: isolate;
+    margin-block-start:1.5px;
+    margin-block-end: 1.5px;
+    margin-inline-start: auto;
+    margin-inline-end: auto;
+    overflow: hidden;
+    border-style: inset;
+    border-width: 0px;
+    margin-bottom: 0;
+    margin-top: 750px;
+    padding-top: 0%;
+    background-color:orangered;
+    height:3px;
+}
+.f_img_sel{
+    font-size: 30px;
+}
+
+.lst p{
+    color:white;
+    font-size: x-large;
+}
+#contact{
+    background-color: orangered;
+    
+
+}
+i,
+.conli{
+    color: white;
+    text-decoration: none;
+    
+}
+.conli{
+    margin-right: 50px;    
+}

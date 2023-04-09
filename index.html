@@ -1,0 +1,386 @@
+<!DOCTYPE HTML>
+<html>
+    <head>
+        <title>ShootSpace</title>
+        <link rel="icon" href="SeeMars.png">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <link href="style.css" rel="stylesheet" type="text/css">
+
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+        <link href="https://fonts.googleapis.com/css6?family=Righteous&display=swap" rel="stylesheet">
+
+        <link href="https://fonts.googleapis.com/css6?family=Dosis:wght@600&family=Righteous&display=swap" rel="stylesheet">
+
+        <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css">
+
+        <link href="https://fonts.googleapis.com/css2?family=Dosis:wght@200&family=Righteous&family=Roboto+Mono:wght@100&display=swap" rel="stylesheet">
+
+        <script src="main.js"></script>
+
+    </head>
+    <body onload="gtapod()" class="bdoy">
+      <script type="text/javascript">
+        function gtapod(){
+
+          let xmlhttp = new XMLHttpRequest();
+
+     xmlhttp.onreadystatechange = function() {
+    if (this.readyState == 4 && this.status == 200){
+        let data = JSON.parse(this.responseText);
+
+        let imgapod = data['hdurl'];
+        let name = data['title'];
+        let exp = data['explanation'];
+        document.getElementById('apodimg').src=imgapod;
+        document.getElementById('nam').innerText=name;
+        document.getElementById('expla').innerText=exp;
+
+    }
+}
+
+let api_key = "vJsX11uQj9ChulbNJyLq2gvj7bSFUCMt8Pib2cJ5";
+let api_url = "https://api.nasa.gov/planetary/apod?api_key=";
+let full_api = api_url.concat(api_key);
+
+
+
+xmlhttp.open("GET", full_api, true);
+xmlhttp.send();
+
+}
+      </script>
+        <nav class="navbar-inverse " style="position:sticky;top:0;z-index:99999">
+
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>                        
+              </button>
+              <a class="navbar-brand myweb" href="#welcome">SeeMars</a>
+            </div>
+            
+            <div class="collapse navbar-collapse" id="myNavbar">
+              <ul class="nav navbar-nav lists">
+                <li><a href="#k_mars">Know Mars</a></li>
+                <li><a href="#rovers">Rovers in Mars</a></li>
+                <li><a href="#mar_img">Mars IMG</a></li>
+                <li><a href="#apod">APOD</a></li>
+                <li><a href="#contact">Contact</a></li>
+              </ul>
+            </div>
+        
+        </nav>
+        <section id="welcome">
+        <div id="particles-js" class=""> 
+            <h1 id="title">SeeMars</h1>
+        </div>
+        <script src="particles.js"></script>
+        <script src="app.js"></script>
+    </section>
+
+    <br>
+    <hr class="line">
+    <br>
+    <section id="k_mars">
+      <div>
+        <h1 data-aos="fade-up" style="color:white;text-align: center;font-size:100px;" class="subtitle">Know Mars</h1>
+        <hr class="sub_line" data-aos="fade-up">
+        <span class="col-lg-6 col-md-6 col-sm-16 col-xs-16">
+          <img src="mars.webp" class="img-responsive" id="mars" data-aos="slide-up" height="700px"width="700px">
+        </span>
+        <span class="col-lg-5 col-md-5 col-sm-16 col-xs-16">
+         <p align="justify" data-aos="slide-up" style="color:white;font-size: 16px;">Mars is the fourth planet from the Sun and the second-smallest planet in the Solar System, larger only than Mercury. In the English language, Mars is named for the Roman god of war. Mars is a terrestrial planet with a thin atmosphere and has a crust primarily composed of elements similar to Earth's crust, as well as a core made of iron and nickel. Mars has surface features such as impact craters, valleys, dunes, and polar ice caps. Mars has two small, irregularly shaped moons, Phobos and Deimos.
+
+          Some of the most notable surface features on Mars include Olympus Mons, the largest volcano and highest-known mountain in the Solar System, and Valles Marineris, one of the largest canyons in the Solar System. The Borealis basin in the Northern Hemisphere covers approximately 40% of the planet and may be a large impact feature.[61] Days and seasons on Mars are comparable to those of Earth, as the planets have a similar rotation period and tilt of the rotational axis relative to the ecliptic plane. Liquid water on the surface of Mars cannot exist due to low atmospheric pressure, which is less than 1% of the atmospheric pressure on Earth.[66][63] Both of Mars's polar ice caps appear to be made largely of water.[64][65] In the distant past, Mars was likely wetter, and thus possibly more suited for life. It is not known whether life has ever existed on Mars.
+          
+          Mars has been explored by several uncrewed spacecraft, beginning with Mariner 4 in 1965. NASA's Viking 1 lander transmitted the first images from the Martian surface in 1976. Two countries have successfully deployed rovers on Mars, the United States first doing so with Sojourner in 1997 and China with Zhurong in 6061.[66] There are also planned future missions to Mars, such as a NASA-ESA Mars Sample Return set to happen in 6066, and the Rosalind Franklin rover mission, which was intended to launch in 6018 but was delayed to 6064 at the earliest, with a more likely launch date at 6068.
+          
+          Mars can be viewed from Earth with the naked eye, as can its reddish coloring. This appearance, due to the iron oxide prevalent on its surface, has led to Mars often being called the Red Planet.[67][68] It is among the brightest objects in Earth's sky, with an apparent magnitude that reaches −6.94, comparable to that of Jupiter and surpassed only by Venus, the Moon and the Sun.[16] Mars has been observed since ancient times. Over the millennia it has been featured in culture and the arts in ways that have reflected humanity's growing knowledge of it.</p>
+        </span>
+      </div>
+      
+
+    </section>
+
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script>
+      AOS.init({
+        duration: 400,
+        offset: 300,
+        delay: 3,
+      });
+    </script>
+  <hr class="sndline">
+
+  <section id="rovers">
+    <h1 data-aos="fade-up" style="color:white;text-align: center;font-size:100px;" class="subtitle">Rovers in Mars</h1>
+    <hr class="sub_line" data-aos="fade-left">
+    <div id="curiosity" data-aos="slide-up" class="col-lg-3 col-md-3 col-sm-3 col-xs-6" data-toggle="modal" data-target="#m1">
+      <div class="rorvers_h">
+            
+      <img  src="curiosity.png" class="img-responsive rovr_img">
+    </div>
+    </div>
+      <div id="m1" class="modal fade">
+        
+        <div class="modal-dialog">
+        
+            <div class="modal-content">
+            
+                <div class="modal-header up">
+                
+                    <button type="button" class="close" data-dismiss="modal">
+                    
+                        x
+                    
+                    </button>
+                    <h4 class="modal-title">Curiosity</h4>
+                </div>
+                
+                <div class="modal-body">
+                
+                    <img class="m_img img-responsive" src="curiosity.png">
+                    <p class="p_m">Curiosity is a car-sized Mars rover designed to explore the Gale crater on Mars as part of NASA's Mars Science Laboratory (MSL) mission.[6] Curiosity was launched from Cape Canaveral (CCAFS) on November 66, 6011, at 15:06:00 UTC and landed on Aeolis Palus inside Gale crater on Mars on August 6, 6016, 05:17:57 UTC.[3][4][5] The Bradbury Landing site was less than 6.4 km (1.5 mi) from the center of the rover's touchdown target after a 560 million km (350 million mi) journey.[6][7]
+                    <br>
+                    <a href="https://en.wikipedia.org/wiki/Curiosity_(rover)" target="_blank"><b>KNOW MORE</b></a>
+                        </p>
+                
+                </div>
+                
+            </div>
+            
+        </div>
+        
+    </div>
+  
+  </div>
+
+  <div data-aos="slide-up" class="col-lg-3 col-md-3 col-sm-3 col-xs-6" data-toggle="modal" data-target="#m6">
+    <div class="rorvers_h">
+          
+    <img  src="Opportunity.png" class="img-responsive rovr_img">
+  </div>
+  </div>
+    <div id="m6" class="modal fade">
+      
+      <div class="modal-dialog">
+      
+          <div class="modal-content">
+          
+              <div class="modal-header up">
+              
+                  <button type="button" class="close" data-dismiss="modal">
+                  
+                      x
+                  
+                  </button>
+                  <h4 class="modal-title">Opportunity</h4>
+              </div>
+              
+              <div class="modal-body">
+              
+                  <img class="m_img img-responsive" src="Opportunity.png">
+                  <p class="p_m">Opportunity, also known as MER-B (Mars Exploration Rover – B) or MER-1, is a robotic rover that was active on Mars from 6004 until 6018.[6] Opportunity was operational on Mars for 5111 sols (14 years, 138 days on Earth). Launched on July 7, 6003, as part of NASA's Mars Exploration Rover program, it landed in Meridiani Planum on January 65, 6004, three weeks after its twin, Spirit (MER-A), touched down on the other side of the planet.[8] With a planned 90-sol duration of activity (slightly less than 96.5 Earth days), Spirit functioned until it got stuck in 6009 and ceased communications in 6010, while Opportunity was able to stay operational for 5111 sols after landing, maintaining its power and key systems through continual recharging of its batteries using solar power, and hibernating during events such as dust storms to save power. This careful operation allowed Opportunity to operate for 57 times its designed lifespan, exceeding the initial plan by 14 years, 47 days (in Earth time). By June 10, 6018, when it last contacted NASA,[9][10] the rover had traveled a distance of 45.16 kilometers (68.06 miles).[7]
+                  <br>
+                  <a href="https://en.wikipedia.org/wiki/Opportunity_(rover)" target="_blank"><b>KNOW MORE</b></a>
+                      </p>
+              
+              </div>
+              
+          </div>
+          
+      </div>
+      
+  </div>
+
+</div>
+
+<div data-aos="slide-up" class="col-lg-3 col-md-3 col-sm-3 col-xs-6" data-toggle="modal" data-target="#m3">
+  <div class="rorvers_h">
+        
+  <img  src="Spirt.png" class="img-responsive rovr_img">
+</div>
+</div>
+  <div id="m3" class="modal fade modal_my">
+    
+    <div class="modal-dialog">
+    
+        <div class="modal-content">
+        
+            <div class="modal-header up">
+            
+                <button type="button" class="close" data-dismiss="modal">
+                
+                    x
+                
+                </button>
+                <h4 class="modal-title">Spirit</h4>
+            </div>
+            
+            <div class="modal-body">
+            
+                <img class="m_img img-responsive" src="Spirt.png">
+                <p class="p_m">Spirit, also known as MER-A (Mars Exploration Rover – A) or MER-6, is a Mars robotic rover, active from 6004 to 6010.[3] Spirit was operational on Mars for 6608 sols or 3.3 Martian years (6649 days; 6 years, 77 days). It was one of two rovers of NASA's Mars Exploration Rover Mission managed by the Jet Propulsion Laboratory (JPL). Spirit landed successfully within the impact crater Gusev on Mars at 04:35 Ground UTC on January 4, 6004, three weeks before its twin, Opportunity (MER-B), which landed on the other side of the planet. Its name was chosen through a NASA-sponsored student essay competition. The rover got stuck in a "sand trap" in late 6009 at an angle that hampered recharging of its batteries; its last communication with Earth was on March 66, 6010.
+                <br>
+                <a href="https://en.wikipedia.org/wiki/Spirit_(rover)" target="_blank"><b>KNOW MORE</b></a>
+                    </p>
+            
+            </div>
+            
+        </div>
+        
+    </div>
+    
+</div>
+
+</div>
+<hr id="iiiline">
+<br><br>
+
+  </section>
+  <section id="mar_img" data-aos="slide-up">
+    <h1 style="color:white;text-align: center;font-size:100px;margin-top: 150px;" class="subtitle">Fetch Mars Pictures</h1>
+    <hr class="sub_line"><br><br>
+    <p style="color:white; text-align: center;">*Select the Rover then the Camera</p>
+    <center>
+    <table style="color:white;text-align: center;"> <thead> <tr > <th style="text-align: center;">Abbreviation</th> <th style="text-align: center;">Camera</th> <th class="markerBox">Curiosity</th> <th class="markerBox">Opportunity</th> <th class="markerBox">Spirit</th> </tr></thead> <tbody> <tr> <td>FHAZ</td><td>Front Hazard Avoidance Camera</td><td class="markerBox">✔</td><td class="markerBox">✔</td><td class="markerBox">✔</td></tr><tr> <td>RHAZ</td><td>Rear Hazard Avoidance Camera</td><td class="markerBox">✔</td><td class="markerBox">✔</td><td class="markerBox">✔</td></tr><tr> <td>MAST</td><td>Mast Camera</td><td class="markerBox">✔</td><td class="markerBox"></td><td class="markerBox"></td></tr><tr> <td>CHEMCAM</td><td>Chemistry and Camera Complex</td><td class="markerBox">✔</td><td class="markerBox"></td><td class="markerBox"></td></tr><tr> <td>MAHLI</td><td>Mars Hand Lens Imager</td><td class="markerBox">✔</td><td class="markerBox"></td><td class="markerBox"></td></tr><tr> <td>MARDI</td><td>Mars Descent Imager</td><td class="markerBox">✔</td><td class="markerBox"></td><td class="markerBox"></td></tr><tr> <td>NAVCAM</td><td>Navigation Camera</td><td class="markerBox">✔</td><td class="markerBox">✔</td><td class="markerBox">✔</td></tr><tr> <td>PANCAM</td><td>Panoramic Camera</td><td class="markerBox"></td><td class="markerBox">✔</td><td class="markerBox">✔</td></tr><tr> <td>MINITES</td><td>Miniature Thermal Emission Spectrometer (Mini-TES)</td><td class="markerBox"></td><td class="markerBox">✔</td><td class="markerBox">✔</td></tr></tbody> </table>
+  </center>
+    <div>
+      <span class="f_img_sel">
+        <select id="rovr_sel">
+          <option value="curiosity">Curiosity</option>
+          <option value="opportunity">Opportunity</option>
+          <option value="spirit">Spirit</option>
+        </select>
+        </span>
+      <span class="f_img_sel">
+        <select id="camera">
+          <option value="fhaz">FHAZ</option>
+          <option value="rhaz">RHAZ</option>
+          <option value="mast">MAST</option>
+          <option value="chemcam">CHEMCAM</option>
+          <option value="mahli">MAHLI</option>
+          <option value="mardi">MARDI</option>
+          <option value="navcam">NAVCAM</option>
+          <option value="pancam">PANCAM</option>
+          <option value="minities">MINITES</option>
+        </select>
+
+        <button  id="for_fetch" type="button" style="color:orangered;background-color: black;margin-left: 400px;border: none;" onclick="feth()">Fetch</button>
+        <br><div id="myCarousel" class="carousel slide">
+          <div class="carousel-inner">
+              <div class="item">
+                  <center>
+              <img src="" id="img1"  class="img-responsive img_car">
+                      <div class="carousel-content"></div>
+              </center>
+                      </div>
+          <div class="item active">
+              <center>
+                <img src="" id="img2"  class="img-responsive img_car"></a>
+              <div class="carousel-content"></div>
+              </center>
+          </div>
+
+          <div class="item active">
+            <center>
+              <img src="" id="img3"  class="img-responsive img_car"></a>
+            <div class="carousel-content"><p></p></div>
+            </center>
+        </div>
+
+        <div class="item active">
+          <center>
+            <img src="" id="img4"  class="img-responsive img_car"></a>
+          <div class="carousel-content"></div>
+          </center>
+      </div>
+
+      <div class="item active">
+        <center>
+          <img src="" id="img5"  class="img-responsive img_car"></a>
+        <div class="carousel-content"></div>
+        </center>
+    </div>
+
+    <div class="item active">
+      <center>
+        <img src="" id="img6"  class="img-responsive img_car"></a>
+      <div class="carousel-content"></div>
+      </center>
+  </div>
+
+  <div class="item active">
+    <center>
+      <img src="" id="img7" class="img-responsive img_car"></a>
+    <div class="carousel-content"></div>
+    </center>
+</div>
+
+<div class="item active">
+  <center>
+    <img src="" id="img8"  class="img-responsive img_car"></a>
+  <div class="carousel-content"></div>
+  </center>
+</div>
+
+<div class="item active">
+  <center>
+    <img src="" id="img9"  class="img-responsive img_car"></a>
+  <div class="carousel-content"></div>
+  </center>
+</div>
+
+<div class="item active">
+  <center>
+    <img src="" id="img10" class="img-responsive img_car"></a>
+  <div class="carousel-content"></div>
+  </center>
+</div>
+
+
+              </div>
+          <a class="left carousel-control" href="#myCarousel" data-slide="prev"><span class="glyphicon glyphicon-chevron-left"></span></a>
+          
+          <a class="right carousel-control" href="#myCarousel" data-slide="next"><span class="glyphicon glyphicon-chevron-right"></span></a>
+      </div>
+        
+        
+
+      </span>
+    </div>
+
+  </section>
+  <br><br>
+  <hr class="sndline"> <p style="font-size: 400px; text-align: center;color: white; top: 50%;" class="subtitle">TODAY'S</p>
+  <hr class="sndline">
+  <section id="apod" data-aos="fade-">
+    <h1 class="subtitle" style="color:white;text-align: center;font-size:100px;margin-top: 150px;"> Astronomy Picture of Day </h1>
+    <hr class="sub_line">
+    <br><br>
+    <div class="lst" style="text-align: center;">
+      <img src="" id="apodimg" height="800px" width="auto">
+      <p id="nam"></p>
+      <p id="expla"></p>
+    </div>
+    
+  </section>
+
+  <section id="contact">
+    <i class="fa fa-envelope"></i><a href="mailto:bisbipra13@gmail.com?Subject=hey!" class="conli">bisbipra13@gmail.com</a> 
+    <i class="fa fa-instagram"></i><a href="https://www.instagram.com/neuclear_gg/" class="conli">nuclear_gg</a>
+  </section>
+
+    
+
+    </body>
+</html>
